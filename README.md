@@ -2,9 +2,6 @@
 
 SmartGuardian is a full-stack resource and management system that combines user authentication, employee and group management, geofence creation, location monitoring, and real-time WebSocket communication. The project is organised into a Spring Boot backend and a Next.js frontend.
 
-
----
-
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
@@ -917,21 +914,6 @@ Send location update messages to:
 
 These are important points found during the repository review.
 
-### 1. Package Name Mismatch
-
-Several backend files appear to declare the package as:
-
-```java
-package com.smartguardian.app...
-```
-
-But some imports still reference an older package name like:
-
-```java
-net.javaguides.todo...
-```
-
-This can cause compilation errors.
 
 Recommended fix:
 
@@ -981,16 +963,7 @@ Recommended fix:
 - Restrict the key in Google Cloud Console.
 - Rotate the exposed key.
 
-### 5. Frontend README Is Still Default Next.js Content
 
-The frontend README appears to contain the default Next.js starter instructions.
-
-Recommended fix:
-
-- Replace it with this project-specific README.
-- Add screenshots.
-- Add API usage examples.
-- Add setup instructions for backend and frontend together.
 
 ### 6. Geofence Persistence Needs Frontend Integration
 
@@ -1088,42 +1061,5 @@ SmartGuardian can be extended with the following features:
 
 ---
 
-## Suggested README Screenshots Section
 
-Add screenshots later in this format:
 
-```markdown
-## Screenshots
-
-### Login Page
-![Login Page](docs/screenshots/login.png)
-
-### Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
-
-### Geofence Page
-![Geofence Page](docs/screenshots/geofence.png)
-
-### Employee Management
-![Employee Management](docs/screenshots/employees.png)
-```
-
----
-
-## Suggested Commit Message
-
-After adding this README, you can commit it using:
-
-```bash
-git add README.md
-git commit -m "Add detailed SmartGuardian project README"
-git push origin smartguardian
-```
-
----
-
-## Conclusion
-
-SmartGuardian is a useful full-stack project that combines authentication, resource management, geofence monitoring, and real-time communication. The backend already has a strong Spring Boot structure with controllers, services, repositories, DTOs, entities, JWT security, and WebSocket support. The frontend contains multiple application pages and map-related functionality using Next.js and React.
-
-Before using it as a final production-ready project, the most important fixes are package-name consistency, environment-based secret handling, API key rotation, frontend-backend geofence persistence, and production security hardening.
