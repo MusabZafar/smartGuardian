@@ -999,48 +999,7 @@ The frontend appears to use browser storage for JWT tokens.
 
 For a student project this is common and simple, but for a production system, consider using secure HTTP-only cookies to reduce token exposure risk.
 
----
 
-## Recommended Improvements
-
-### Backend Improvements
-
-- Add Swagger/OpenAPI documentation.
-- Add global exception handling using `@ControllerAdvice`.
-- Add validation annotations in DTO classes.
-- Add pagination for employee, group, and geofence lists.
-- Add audit fields like `createdAt`, `updatedAt`, `createdBy`, and `updatedBy`.
-- Add unit tests for services.
-- Add integration tests for controllers.
-- Improve package naming consistency.
-- Add role and permission documentation.
-- Add API response standardization.
-
-### Frontend Improvements
-
-- Replace hard-coded backend URLs with environment variables.
-- Move all API calls into a separate service layer.
-- Add loading states and error messages.
-- Add form validation.
-- Add map error handling when geolocation permission is denied.
-- Add reusable layout and sidebar components.
-- Add route guards for protected pages.
-- Add a logout flow.
-- Add better mobile responsiveness.
-- Add screenshots to the README.
-
-### Security Improvements
-
-- Rotate exposed API keys.
-- Keep secrets out of Git.
-- Use restricted API keys.
-- Restrict CORS and WebSocket origins in production.
-- Use stronger JWT secret management.
-- Add rate limiting for login and OTP endpoints.
-- Add account lockout after repeated failed login attempts.
-- Validate uploaded profile images.
-
----
 
 ## Future Scope
 
